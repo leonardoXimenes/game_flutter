@@ -1,6 +1,8 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:game_usf/personagem.dart';
 
+double tileSize = 64;
 void main() {
   runApp(const MyApp());
 }
@@ -28,7 +30,9 @@ class Game extends StatelessWidget {
   Widget build(BuildContext context) {
     return BonfireTiledWidget(
       joystick: Joystick(directional: JoystickDirectional()),
-      map: TiledWorldMap('map/casarao.json', forceTileSize: const Size(32, 32)),
+      map: TiledWorldMap('map/casarao.json',
+          forceTileSize: Size(tileSize, tileSize)),
+      player: Personagem(Vector2(tileSize * 10, tileSize * 10)),
     );
   }
 }
