@@ -2,7 +2,7 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/personagem.dart';
 
-double tileSize = 64;
+double tileSize = 16 * 4;
 void main() {
   runApp(const MyApp());
 }
@@ -32,7 +32,12 @@ class Game extends StatelessWidget {
       joystick: Joystick(directional: JoystickDirectional()),
       map: TiledWorldMap('map/casarao.json',
           forceTileSize: Size(tileSize, tileSize)),
-      player: Personagem(Vector2(tileSize * 10, tileSize * 10)),
+      player: Personagem(Vector2(tileSize * 28, tileSize * 36)),
+      cameraConfig: CameraConfig(
+          smoothCameraEnable: true,
+          smoothCameraSpeed: 5,
+          sizeMovementWindow: const Size(10, 10)),
+      showCollisionArea: false,
     );
   }
 }

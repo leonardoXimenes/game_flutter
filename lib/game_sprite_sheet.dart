@@ -1,5 +1,4 @@
 import 'package:bonfire/bonfire.dart';
-import 'package:game_usf/personagem.dart';
 
 double x = 20, y = 20, tempo = 0.1;
 
