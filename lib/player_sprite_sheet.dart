@@ -2,7 +2,7 @@ import 'package:bonfire/bonfire.dart';
 
 double x = 20, y = 20, tempo = 0.1;
 
-class GameSpriteSheet {
+class PlayerSpriteSheet {
   //Parado para a esquerda-----------------------------------------
   static Future<SpriteAnimation> get idleleft => SpriteAnimation.load(
       'detetiveP1.png',

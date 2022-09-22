@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:game_usf/game_sprite_sheet.dart';
+import 'package:game_usf/player_sprite_sheet.dart';
 
 double tamanho = 20 * 4;
 
@@ -9,10 +9,10 @@ class Personagem extends SimplePlayer with ObjectCollision {
       : super(
             position: position,
             animation: SimpleDirectionAnimation(
-                idleLeft: GameSpriteSheet.idleleft,
-                idleRight: GameSpriteSheet.idleright,
-                runRight: GameSpriteSheet.runRight,
-                runLeft: GameSpriteSheet.runLeft),
+                idleLeft: PlayerSpriteSheet.idleleft,
+                idleRight: PlayerSpriteSheet.idleright,
+                runRight: PlayerSpriteSheet.runRight,
+                runLeft: PlayerSpriteSheet.runLeft),
             speed: 160,
             width: tamanho,
             height: tamanho) {

@@ -1,6 +1,7 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/personagem.dart';
+import 'package:game_usf/zumbi.dart';
 
 double tileSize = 16 * 4;
 void main() {
@@ -31,6 +32,7 @@ class Game extends StatelessWidget {
     return BonfireTiledWidget(
       joystick: Joystick(directional: JoystickDirectional()),
       map: TiledWorldMap('map/casarao.json',
+          objectsBuilder: {'zumbi': (properties) => Zumbi(properties.position)},
           forceTileSize: Size(tileSize, tileSize)),
       player: Personagem(Vector2(tileSize * 28, tileSize * 36)),
       cameraConfig: CameraConfig(
