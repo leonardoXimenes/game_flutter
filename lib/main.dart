@@ -30,7 +30,19 @@ class Game extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BonfireTiledWidget(
-      joystick: Joystick(directional: JoystickDirectional()),
+      joystick: Joystick(
+          directional: JoystickDirectional(
+            color: Colors.red,
+            size: 100,
+          ),
+          actions: [
+            JoystickAction(
+              actionId: 1,
+              color: Colors.red,
+              margin: EdgeInsets.all(40),
+              size: 80,
+            )
+          ]),
       map: TiledWorldMap('map/casarao.json',
           objectsBuilder: {'zumbi': (properties) => Zumbi(properties.position)},
           forceTileSize: Size(tileSize, tileSize)),
