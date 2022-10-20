@@ -114,4 +114,26 @@ class PlayerSpriteSheet {
           texturePosition: Vector2(0, y * 3),
         ),
       );
+
+  //Morte a direita-----------------------------------------
+  static Future<SpriteAnimation> get dieRight => SpriteAnimation.load(
+        'detetiveP1.png',
+        SpriteAnimationData.sequenced(
+          amount: 1,
+          stepTime: tempo,
+          textureSize: Vector2(x, y),
+          texturePosition: Vector2(x * 7, y * 3),
+        ),
+      );
+
+//Morte a esquerda-----------------------------------------
+  static Future<SpriteAnimation> get dieLeft => SpriteAnimation.load(
+        'detetiveP1.png',
+        SpriteAnimationData.sequenced(
+          amount: 1,
+          stepTime: tempo,
+          textureSize: Vector2(x, y),
+          texturePosition: Vector2(x * 8, y * 3),
+        ),
+      );
 }

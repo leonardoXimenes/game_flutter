@@ -1,11 +1,12 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:game_usf/player_sprite_sheet.dart';
 
 double tamanho = 20 * 4;
 bool mover = true;
 
-class Personagem extends SimplePlayer with ObjectCollision {
+class Personagem extends SimplePlayer with ObjectCollision, Lighting {
   Personagem(Vector2 position)
       : super(
             position: position,
@@ -18,19 +19,44 @@ class Personagem extends SimplePlayer with ObjectCollision {
             width: tamanho,
             height: tamanho) {
     setupCollision(
-      CollisionConfig(collisions: [
-        CollisionArea.rectangle(
-            size: const Size(45, 20), align: Vector2(18, 55))
-      ]),
+      CollisionConfig(
+        collisions: [
+          CollisionArea.rectangle(
+            size: const Size(45, 20),
+            align: Vector2(18, 55),
+          ),
+        ],
+      ),
+    );
+
+    setupLighting(
+      LightingConfig(
+        radius: tamanho * 1.1,
+        color: Colors.transparent,
+        withPulse: true,
+        blurBorder: 50,
+        pulseVariation: 0.3,
+        pulseSpeed: 0.5,
+        pulseCurve: Curves.linear,
+      ),
     );
   }
 
   @override
   void joystickAction(JoystickActionEvent event) {
-    if (event.event == ActionEvent.DOWN && event.id == 1) {
-      _executeAttack();
+    if (mover) {
+      if (event.event == ActionEvent.DOWN && event.id == 1) {
+        _executeAttack();
+      }
+      super.joystickAction(event);
     }
-    super.joystickAction(event);
+  }
+
+  @override
+  void joystickChangeDirectional(JoystickDirectionalEvent event) {
+    if (mover) {
+      super.joystickChangeDirectional(event);
+    }
   }
 
   void _executeAttack() {
@@ -48,7 +74,25 @@ class Personagem extends SimplePlayer with ObjectCollision {
 
   @override
   void die() {
-    removeFromParent();
+    if (lastDirectionHorizontal == Direction.left) {
+      animation?.playOnce(
+        PlayerSpriteSheet.dieLeft,
+        runToTheEnd: true,
+        onFinish: () {
+          removeFromParent();
+        },
+      );
+    } else {
+      animation?.playOnce(
+        PlayerSpriteSheet.dieRight,
+        runToTheEnd: true,
+        onFinish: () {
+          removeFromParent();
+        },
+      );
+    }
+    mover = false;
+
     super.die();
   }
 

@@ -2,10 +2,15 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
+import 'package:flutter/services.dart';
 
 double tileSize = 16 * 4;
 void main() {
   runApp(const MyApp());
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeLeft,
+    DeviceOrientation.landscapeRight,
+  ]);
 }
 
 class MyApp extends StatelessWidget {
@@ -32,13 +37,13 @@ class Game extends StatelessWidget {
     return BonfireTiledWidget(
       joystick: Joystick(
           directional: JoystickDirectional(
-            color: Colors.red,
+            color: Colors.grey,
             size: 100,
           ),
           actions: [
             JoystickAction(
               actionId: 1,
-              color: Colors.red,
+              color: Colors.grey,
               margin: EdgeInsets.all(40),
               size: 80,
             )
@@ -48,10 +53,12 @@ class Game extends StatelessWidget {
           forceTileSize: Size(tileSize, tileSize)),
       player: Personagem(Vector2(tileSize * 28, tileSize * 36)),
       cameraConfig: CameraConfig(
-          smoothCameraEnable: true,
-          smoothCameraSpeed: 5,
-          sizeMovementWindow: const Size(10, 10)),
+        smoothCameraEnable: true,
+        smoothCameraSpeed: 5,
+        sizeMovementWindow: const Size(10, 10),
+      ),
       showCollisionArea: false,
+      lightingColorGame: Colors.black.withOpacity(0.98),
     );
   }
 }

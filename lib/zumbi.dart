@@ -54,7 +54,24 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
 
   @override
   void die() {
-    removeFromParent();
+    if (lastDirectionHorizontal == Direction.left) {
+      animation?.playOnce(
+        ZumbiSpriteSheet.dieLeft,
+        runToTheEnd: true,
+        onFinish: () {
+          removeFromParent();
+        },
+      );
+    } else {
+      animation?.playOnce(
+        ZumbiSpriteSheet.dieRight,
+        runToTheEnd: true,
+        onFinish: () {
+          removeFromParent();
+        },
+      );
+    }
+
     super.die();
   }
 
