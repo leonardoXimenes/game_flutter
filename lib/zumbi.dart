@@ -1,12 +1,12 @@
 import 'dart:ui';
 
 import 'package:bonfire/bonfire.dart';
+import 'package:game_usf/personagem.dart';
 import 'package:game_usf/player_sprite_sheet.dart';
 import 'package:game_usf/zumbi_sprite_sheet.dart';
 
 import 'main.dart';
 
-double tamanho = 20 * 4;
 bool mover = true;
 
 class Zumbi extends SimpleEnemy with ObjectCollision {
@@ -15,7 +15,7 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
           position: position,
           height: tamanho,
           width: tamanho,
-          speed: 100,
+          speed: 20,
           animation: SimpleDirectionAnimation(
               idleLeft: ZumbiSpriteSheet.idleleft,
               idleRight: ZumbiSpriteSheet.idleright,
@@ -23,7 +23,10 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
               runRight: ZumbiSpriteSheet.runRight),
         ) {
     setupCollision(CollisionConfig(collisions: [
-      CollisionArea.rectangle(size: const Size(45, 30), align: Vector2(18, 45))
+      CollisionArea.rectangle(
+        size: const Size(8, 8),
+        align: Vector2(6, 10),
+      )
     ]));
   }
 
@@ -44,10 +47,10 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
   void render(Canvas canvas) {
     drawDefaultLifeBar(
       canvas,
-      borderWidth: 10,
-      height: 15,
-      width: 50,
-      align: const Offset(15, -15),
+      borderWidth: 1,
+      height: 1,
+      width: 5,
+      align: const Offset(7.5, -7.5),
     );
     super.render(canvas);
   }
@@ -104,10 +107,10 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
       sizePush: tamanho * 0.4,
       height: tamanho * 0.8,
       width: tamanho * 0.8,
-      animationLeft: PlayerSpriteSheet.attackLeft,
-      animationRight: PlayerSpriteSheet.attackRight,
-      animationUp: PlayerSpriteSheet.attackTop,
-      animationDown: PlayerSpriteSheet.attackDown,
+      animationLeft: PlayerSpriteSheet.attacVFXLeft,
+      animationRight: PlayerSpriteSheet.attackVFXRight,
+      animationUp: PlayerSpriteSheet.attackVFXTop,
+      animationDown: PlayerSpriteSheet.attacVFXDown,
     );
   }
 }

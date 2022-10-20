@@ -4,7 +4,7 @@ import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
 import 'package:flutter/services.dart';
 
-double tileSize = 16 * 4;
+double tileSize = 16;
 void main() {
   runApp(const MyApp());
   SystemChrome.setPreferredOrientations([
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Game RE2D',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -44,20 +44,24 @@ class Game extends StatelessWidget {
             JoystickAction(
               actionId: 1,
               color: Colors.grey,
-              margin: EdgeInsets.all(40),
+              margin: const EdgeInsets.all(40),
               size: 80,
             )
           ]),
-      map: TiledWorldMap('map/casarao.json',
-          objectsBuilder: {'zumbi': (properties) => Zumbi(properties.position)},
-          forceTileSize: Size(tileSize, tileSize)),
+      map: TiledWorldMap(
+        'map/casarao.json',
+        objectsBuilder: {'zumbi': (properties) => Zumbi(properties.position)},
+      ),
       player: Personagem(Vector2(tileSize * 28, tileSize * 36)),
       cameraConfig: CameraConfig(
         smoothCameraEnable: true,
         smoothCameraSpeed: 5,
         sizeMovementWindow: const Size(10, 10),
+        zoom: 4.0,
       ),
       showCollisionArea: false,
+
+      //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),
     );
   }

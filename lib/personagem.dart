@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/player_sprite_sheet.dart';
 
-double tamanho = 20 * 4;
+double tamanho = 20;
 bool mover = true;
 
 class Personagem extends SimplePlayer with ObjectCollision, Lighting {
@@ -15,15 +15,15 @@ class Personagem extends SimplePlayer with ObjectCollision, Lighting {
                 idleRight: PlayerSpriteSheet.idleright,
                 runRight: PlayerSpriteSheet.runRight,
                 runLeft: PlayerSpriteSheet.runLeft),
-            speed: 160,
+            speed: 32,
             width: tamanho,
             height: tamanho) {
     setupCollision(
       CollisionConfig(
         collisions: [
           CollisionArea.rectangle(
-            size: const Size(45, 20),
-            align: Vector2(18, 55),
+            size: const Size(8, 5),
+            align: Vector2(6, 10),
           ),
         ],
       ),
@@ -65,10 +65,10 @@ class Personagem extends SimplePlayer with ObjectCollision, Lighting {
       sizePush: tamanho * 0.4,
       height: tamanho * 0.8,
       width: tamanho * 0.8,
-      animationLeft: PlayerSpriteSheet.attackLeft,
-      animationRight: PlayerSpriteSheet.attackRight,
-      animationUp: PlayerSpriteSheet.attackTop,
-      animationDown: PlayerSpriteSheet.attackDown,
+      animationLeft: PlayerSpriteSheet.attacVFXLeft,
+      animationRight: PlayerSpriteSheet.attackVFXRight,
+      animationUp: PlayerSpriteSheet.attackVFXTop,
+      animationDown: PlayerSpriteSheet.attacVFXDown,
     );
   }
 

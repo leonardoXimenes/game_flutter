@@ -73,6 +73,29 @@ class PlayerSpriteSheet {
 //----------------------------------------------------------
 //Ataque para a esquerda-----------------------------------------
   static Future<SpriteAnimation> get attackLeft => SpriteAnimation.load(
+        'detetiveP1.png',
+        SpriteAnimationData.sequenced(
+          amount: 3,
+          stepTime: tempo,
+          textureSize: Vector2(x, y),
+          texturePosition: Vector2(x * 13, y * 2),
+        ),
+      );
+
+//Ataque para a direita-----------------------------------------
+  static Future<SpriteAnimation> get attackRight => SpriteAnimation.load(
+        'detetiveP1.png',
+        SpriteAnimationData.sequenced(
+          amount: 3,
+          stepTime: tempo,
+          textureSize: Vector2(x, y),
+          texturePosition: Vector2(0, y * 2),
+        ),
+      );
+
+//----------------------------------------------------------
+//Ataque vfx para a esquerda-----------------------------------------
+  static Future<SpriteAnimation> get attacVFXLeft => SpriteAnimation.load(
         'ataque.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -82,8 +105,8 @@ class PlayerSpriteSheet {
         ),
       );
 
-//Ataque para a direita-----------------------------------------
-  static Future<SpriteAnimation> get attackRight => SpriteAnimation.load(
+//Ataque vfx para a direita-----------------------------------------
+  static Future<SpriteAnimation> get attackVFXRight => SpriteAnimation.load(
         'ataque.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -93,8 +116,8 @@ class PlayerSpriteSheet {
         ),
       );
 
-//Ataque para cima-----------------------------------------
-  static Future<SpriteAnimation> get attackTop => SpriteAnimation.load(
+//Ataque vfx para cima-----------------------------------------
+  static Future<SpriteAnimation> get attackVFXTop => SpriteAnimation.load(
         'ataque.png',
         SpriteAnimationData.sequenced(
           amount: 4,
@@ -104,8 +127,8 @@ class PlayerSpriteSheet {
         ),
       );
 
-//Ataque para baixo-----------------------------------------
-  static Future<SpriteAnimation> get attackDown => SpriteAnimation.load(
+//Ataque vfx para baixo-----------------------------------------
+  static Future<SpriteAnimation> get attacVFXDown => SpriteAnimation.load(
         'ataque.png',
         SpriteAnimationData.sequenced(
           amount: 4,
