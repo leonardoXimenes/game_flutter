@@ -1000,6 +1000,28 @@
                  "width":16,
                  "x":390,
                  "y":48
+                }, 
+                {
+                 "height":16,
+                 "id":97,
+                 "name":"vida",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":488.333333333333,
+                 "y":544
+                }, 
+                {
+                 "height":16,
+                 "id":98,
+                 "name":"mathias",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":415.666666666666,
+                 "y":592.333333333334
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1008,7 +1030,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":97,
+ "nextobjectid":99,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.03.23",

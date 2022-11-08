@@ -1,6 +1,7 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/decorations/energia.dart';
+import 'package:game_usf/decorations/item.dart';
 import 'package:game_usf/decorations/lamp.dart';
 import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
@@ -66,11 +67,13 @@ class Game extends StatelessWidget {
           'lampy': (properties) => LampY(properties.position),
           'lampg': (properties) => LampG(properties.position),
           'lampr': (properties) => LampR(properties.position),
-          'fusivel': (properties) => Lamp(properties.position), //Fusivel
-          'alicate': (properties) => LampR(properties.position), //Alicate
-          'cartao': (properties) => Lamp(properties.position), //Cartao
-          'chavey': (properties) => LampY(properties.position), //ChaveY
-          'chaveg': (properties) => LampG(properties.position), //ChaveG
+          'fusivel': (properties) => Fusivel(properties.position),
+          'alicate': (properties) => Alicate(properties.position),
+          'cartao': (properties) => Cartao(properties.position),
+          'chavey': (properties) => ChaveY(properties.position),
+          'chaveg': (properties) => ChaveG(properties.position),
+          'vida': (properties) => Vida(properties.position),
+          'mathias': (properties) => Mathias(properties.position),
         },
       ),
       player: Personagem(

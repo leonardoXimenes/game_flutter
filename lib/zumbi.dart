@@ -74,7 +74,7 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
         },
       );
     }
-
+    mover = true;
     super.die();
   }
 
