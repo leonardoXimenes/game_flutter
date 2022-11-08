@@ -1,5 +1,11 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:game_usf/decorations/energia.dart';
+import 'package:game_usf/decorations/lamp.dart';
+import 'package:game_usf/decorations/portaB.dart';
+import 'package:game_usf/decorations/portaC.dart';
+import 'package:game_usf/decorations/portaG.dart';
+import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
 import 'package:flutter/services.dart';
@@ -50,9 +56,34 @@ class Game extends StatelessWidget {
           ]),
       map: TiledWorldMap(
         'map/casarao.json',
-        objectsBuilder: {'zumbi': (properties) => Zumbi(properties.position)},
+        objectsBuilder: {
+          'zumbi': (properties) => Zumbi(properties.position),
+          'lamp': (properties) => Lamp(properties.position),
+          'energia': (properties) => Energia(properties.position),
+          'portaG': (properties) => PortaG(properties.position),
+          'portaC': (properties) => PortaC(properties.position),
+          'portaB': (properties) => PortaB(properties.position),
+          'lampy': (properties) => LampY(properties.position),
+          'lampg': (properties) => LampG(properties.position),
+          'lampr': (properties) => LampR(properties.position),
+          'fusivel': (properties) => Lamp(properties.position), //Fusivel
+          'alicate': (properties) => LampR(properties.position), //Alicate
+          'cartao': (properties) => Lamp(properties.position), //Cartao
+          'chavey': (properties) => LampY(properties.position), //ChaveY
+          'chaveg': (properties) => LampG(properties.position), //ChaveG
+        },
       ),
-      player: Personagem(Vector2(tileSize * 28, tileSize * 36)),
+      player: Personagem(
+        Vector2(tileSize * 28, tileSize * 36),
+      ),
+      overlayBuilderMap: {
+        PlayerInterface.overlayKey: (context, game) => PlayerInterface(
+              game: game,
+            )
+      },
+      initialActiveOverlays: const [
+        PlayerInterface.overlayKey,
+      ],
       cameraConfig: CameraConfig(
         smoothCameraEnable: true,
         smoothCameraSpeed: 5,
