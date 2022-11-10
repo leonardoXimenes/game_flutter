@@ -9,7 +9,7 @@ import 'main.dart';
 
 bool mover = true;
 
-class Zumbi extends SimpleEnemy with ObjectCollision {
+class Zumbi extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement {
   Zumbi(Vector2 position)
       : super(
           position: position,
@@ -33,13 +33,24 @@ class Zumbi extends SimpleEnemy with ObjectCollision {
   @override
   void update(double dt) {
     if (mover) {
-      seeAndMoveToPlayer(
-        closePlayer: (player) {
-          _executeAttack();
+      seePlayer(
+        observed: (player) {
+          seeAndMoveToPlayer(
+            closePlayer: (player) {
+              _executeAttack();
+            },
+            radiusVision: tileSize * 1.8,
+          );
+        },
+        notObserved: () {
+          if (!isDead) {
+            runRandomMovement(dt);
+          }
         },
         radiusVision: tileSize * 1.8,
       );
     }
+
     super.update(dt);
   }
 

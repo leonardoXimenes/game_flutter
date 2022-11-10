@@ -2,10 +2,15 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/player_sprite_sheet.dart';
 
+import 'decoration_sprite_sheet.dart';
+
 double tamanho = 20;
 bool mover = true;
+String item = "";
+int quantidade = 0;
 
-class Personagem extends SimplePlayer with ObjectCollision, Lighting {
+class Personagem extends SimplePlayer
+    with ObjectCollision, Lighting, TapGesture {
   Personagem(Vector2 position)
       : super(
             position: position,
@@ -115,5 +120,42 @@ class Personagem extends SimplePlayer with ObjectCollision, Lighting {
       );
     }
     super.receiveDamage(damage, from);
+  }
+
+//---------------------------------------------------------------------
+  @override
+  void onTap() {
+    if (FollowerWidget.isVisible('identify')) {
+      FollowerWidget.remove('identify');
+    } else {
+      FollowerWidget.show(
+        identify: 'identify',
+        context: context,
+        target: this,
+        child: Card(
+          child: Row(
+            children: const [
+              Text('???'),
+              Icon(Icons.add_card),
+            ],
+          ),
+        ),
+      );
+    }
+  }
+
+  @override
+  void onTapCancel() {
+    // TODO: implement onTapCancel
+  }
+
+  @override
+  void onTapDown(int pointer, Offset position) {
+    // TODO: implement onTapDown
+  }
+
+  @override
+  void onTapUp(int pointer, Offset position) {
+    // TODO: implement onTapUp
   }
 }

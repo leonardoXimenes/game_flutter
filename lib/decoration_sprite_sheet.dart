@@ -45,4 +45,10 @@ class DecorationSpriteSheet {
         srcPosition: Vector2(tileSize * 8, 24),
         srcSize: Vector2(tileSize * 2, 24),
       );
+//---------------------Rosto do personagem-------------------------------
+  static Future<Sprite> get rosto => Sprite.load(
+        'itens.png',
+        srcPosition: Vector2(0, tileSize * 7),
+        srcSize: Vector2(tileSize, tileSize),
+      );
 }

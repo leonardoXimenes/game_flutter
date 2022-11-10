@@ -1,8 +1,11 @@
 import 'package:bonfire/base/bonfire_game.dart';
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
+import 'package:game_usf/decoration_sprite_sheet.dart';
 
 import 'dart:async' as async;
+
+import '../player_sprite_sheet.dart';
 
 String imagem = 'assets/images/head.png';
 
@@ -41,19 +44,23 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
       padding: const EdgeInsets.all(25.0),
       child: Row(
         children: [
-          Container(
-            width: 50,
-            height: 50,
-            decoration: BoxDecoration(
-              color: const Color.fromARGB(50, 255, 255, 255),
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.white, width: 4),
-            ),
-            //-----------------adicionando imagem-----------------------
-            child: Image.asset(
-              imagem,
-              scale: 2 / 5,
-            ),
+          Stack(
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(50, 255, 255, 255),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: Colors.white, width: 4),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+                width: 50,
+                child: DecorationSpriteSheet.rosto.asWidget(),
+              ),
+            ],
           ),
           const SizedBox(
             width: 2,
