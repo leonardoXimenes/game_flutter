@@ -136,7 +136,6 @@ class Personagem extends SimplePlayer
           child: Row(
             children: const [
               Text('???'),
-              Icon(Icons.add_card),
             ],
           ),
         ),
