@@ -9,7 +9,7 @@ class DecorationSpriteSheet {
       );
   static Future<Sprite> get energiaLigada => Sprite.load(
         'itens.png',
-        srcPosition: Vector2(tileSize * 2, tileSize * 8),
+        srcPosition: Vector2(0, tileSize * 8),
         srcSize: Vector2(tileSize, tileSize),
       );
   //---------------------Porta de Frente----------------------------------

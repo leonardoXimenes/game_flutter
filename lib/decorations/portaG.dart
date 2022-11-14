@@ -60,8 +60,6 @@ class PortaG extends GameDecoration with ObjectCollision {
           ],
         ),
       );
-    } else {
-      sprite = portaG;
     }
     super.render(canvas);
   }

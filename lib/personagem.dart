@@ -2,8 +2,6 @@ import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/player_sprite_sheet.dart';
 
-import 'decoration_sprite_sheet.dart';
-
 double tamanho = 20;
 bool mover = true;
 String item = "";
@@ -11,6 +9,9 @@ int quantidade = 0;
 
 class Personagem extends SimplePlayer
     with ObjectCollision, Lighting, TapGesture {
+  bool fusivel = false;
+  int totalLigado = 0;
+
   Personagem(Vector2 position)
       : super(
             position: position,
@@ -136,6 +137,7 @@ class Personagem extends SimplePlayer
           child: Row(
             children: const [
               Text('???'),
+              Icon(Icons.add_card),
             ],
           ),
         ),
@@ -145,16 +147,16 @@ class Personagem extends SimplePlayer
 
   @override
   void onTapCancel() {
-    // TODO: implement onTapCancel
+    //
   }
 
   @override
   void onTapDown(int pointer, Offset position) {
-    // TODO: implement onTapDown
+    //
   }
 
   @override
   void onTapUp(int pointer, Offset position) {
-    // TODO: implement onTapUp
+    //
   }
 }

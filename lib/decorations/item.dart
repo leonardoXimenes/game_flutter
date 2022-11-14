@@ -8,7 +8,9 @@ import 'package:game_usf/player_sprite_sheet.dart';
 
 import '../main.dart';
 
-class Fusivel extends GameDecoration {
+//var p = Personagem(Vector2.all(tileSize));
+
+class Fusivel extends GameDecoration with Sensor {
   Fusivel(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.fusivelAnim,
@@ -16,10 +18,20 @@ class Fusivel extends GameDecoration {
           width: tileSize,
           height: tileSize,
         );
+  @override
+  void onContact(GameComponent component) {
+    if (component is Personagem && component.fusivel == false) {
+      component.fusivel = true;
+      removeFromParent();
+      if (component.life < 100) {
+        (component).addLife(10);
+      }
+    }
+  }
 }
 
 //----------------------------------------------------
-class Alicate extends GameDecoration {
+class Alicate extends GameDecoration with Sensor {
   Alicate(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.alicateAnim,
@@ -27,10 +39,19 @@ class Alicate extends GameDecoration {
           width: tileSize,
           height: tileSize,
         );
+  @override
+  void onContact(GameComponent component) {
+    if (component is Personagem) {
+      if (component.life < 100) {
+        (component).addLife(10);
+        removeFromParent();
+      }
+    }
+  }
 }
 
 //----------------------------------------------------
-class Cartao extends GameDecoration {
+class Cartao extends GameDecoration with Sensor {
   Cartao(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.cartaoAnim,
@@ -38,10 +59,19 @@ class Cartao extends GameDecoration {
           width: tileSize,
           height: tileSize,
         );
+  @override
+  void onContact(GameComponent component) {
+    if (component is Personagem) {
+      if (component.life < 100) {
+        (component).addLife(10);
+        removeFromParent();
+      }
+    }
+  }
 }
 
 //----------------------------------------------------
-class ChaveY extends GameDecoration {
+class ChaveY extends GameDecoration with Sensor {
   ChaveY(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.chaveyAnim,
@@ -49,10 +79,19 @@ class ChaveY extends GameDecoration {
           width: tileSize,
           height: tileSize,
         );
+  @override
+  void onContact(GameComponent component) {
+    if (component is Personagem) {
+      if (component.life < 100) {
+        (component).addLife(10);
+        removeFromParent();
+      }
+    }
+  }
 }
 
 //----------------------------------------------------
-class ChaveG extends GameDecoration {
+class ChaveG extends GameDecoration with Sensor {
   ChaveG(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.chavegAnim,
@@ -60,6 +99,15 @@ class ChaveG extends GameDecoration {
           width: tileSize,
           height: tileSize,
         );
+  @override
+  void onContact(GameComponent component) {
+    if (component is Personagem) {
+      if (component.life < 100) {
+        (component).addLife(10);
+        removeFromParent();
+      }
+    }
+  }
 }
 
 //----------------------------------------------------

@@ -1,11 +1,8 @@
-import 'package:bonfire/base/bonfire_game.dart';
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/decoration_sprite_sheet.dart';
 
 import 'dart:async' as async;
-
-import '../player_sprite_sheet.dart';
 
 String imagem = 'assets/images/head.png';
 
