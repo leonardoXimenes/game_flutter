@@ -5,12 +5,14 @@ import 'package:game_usf/decorations/item.dart';
 import 'package:game_usf/decorations/lamp.dart';
 import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
-import 'package:game_usf/decorations/portaG.dart';
 import 'package:game_usf/decorations/porta_azul.dart';
+import 'package:game_usf/decorations/porta_vermelha.dart';
 import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
 import 'package:flutter/services.dart';
+
+import 'decorations/portag_teste.dart';
 
 double tileSize = 16;
 void main() {
@@ -63,7 +65,7 @@ class Game extends StatelessWidget {
           'zumbi': (properties) => Zumbi(properties.position),
           'lamp': (properties) => Lamp(properties.position),
           'energia': (properties) => Energia(properties.position),
-          'portaG': (properties) => PortaG(properties.position),
+          'portaG': (properties) => PortaGTeste(properties.position),
           'portaC': (properties) => PortaC(properties.position),
           'portaB': (properties) => PortaB(properties.position),
           'lampy': (properties) => LampY(properties.position),
@@ -77,6 +79,7 @@ class Game extends StatelessWidget {
           'vida': (properties) => Vida(properties.position),
           'mathias': (properties) => Mathias(properties.position),
           'portaAzul': (properties) => PortaAzul(properties.position),
+          'portaVermelha': (properties) => PortaVermelha(properties.position),
         },
       ),
       player: Personagem(
