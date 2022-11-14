@@ -617,7 +617,7 @@
                 {
                  "height":32,
                  "id":45,
-                 "name":"portaG",
+                 "name":"portaAzul",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -899,6 +899,17 @@
                  "width":32,
                  "x":72.03125,
                  "y":240.495416666667
+                }, 
+                {
+                 "height":32,
+                 "id":107,
+                 "name":"portaG",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":716,
+                 "y":309.333333333333
                 }],
          "offsetx":-8,
          "offsety":-8.33333333333326,
@@ -993,7 +1004,7 @@
                 {
                  "height":16,
                  "id":96,
-                 "name":"cartao",
+                 "name":"cartaob",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -1022,6 +1033,94 @@
                  "width":16,
                  "x":415.666666666666,
                  "y":592.333333333334
+                }, 
+                {
+                 "height":16,
+                 "id":99,
+                 "name":"vida",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":674,
+                 "y":218
+                }, 
+                {
+                 "height":16,
+                 "id":100,
+                 "name":"vida",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":168,
+                 "y":228
+                }, 
+                {
+                 "height":16,
+                 "id":101,
+                 "name":"cartaob",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":365,
+                 "y":575.5
+                }, 
+                {
+                 "height":16,
+                 "id":102,
+                 "name":"fusivel",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":400.5,
+                 "y":553
+                }, 
+                {
+                 "height":16,
+                 "id":103,
+                 "name":"fusivel",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":765.5,
+                 "y":250.5
+                }, 
+                {
+                 "height":16,
+                 "id":104,
+                 "name":"fusivel",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":735,
+                 "y":251
+                }, 
+                {
+                 "height":16,
+                 "id":105,
+                 "name":"fusivel",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":710,
+                 "y":254
+                }, 
+                {
+                 "height":16,
+                 "id":106,
+                 "name":"fusivel",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":717.5,
+                 "y":283.5
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1030,7 +1129,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":99,
+ "nextobjectid":108,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.03.23",

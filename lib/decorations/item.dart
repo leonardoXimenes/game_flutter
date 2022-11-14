@@ -41,18 +41,19 @@ class Alicate extends GameDecoration with Sensor {
         );
   @override
   void onContact(GameComponent component) {
-    if (component is Personagem) {
+    if (component is Personagem && component.alicateVermelho == false) {
+      component.alicateVermelho = true;
+      removeFromParent();
       if (component.life < 100) {
         (component).addLife(10);
-        removeFromParent();
       }
     }
   }
 }
 
 //----------------------------------------------------
-class Cartao extends GameDecoration with Sensor {
-  Cartao(Vector2 position)
+class CartaoAzul extends GameDecoration with Sensor {
+  CartaoAzul(Vector2 position)
       : super.withAnimation(
           ItemSpriteSheet.cartaoAnim,
           position: position,
@@ -61,10 +62,12 @@ class Cartao extends GameDecoration with Sensor {
         );
   @override
   void onContact(GameComponent component) {
-    if (component is Personagem) {
+    if (component is Personagem && component.cartaoAzul == false) {
+      component.cartaoAzul = true;
+      component.totalLigado += 1;
+      removeFromParent();
       if (component.life < 100) {
         (component).addLife(10);
-        removeFromParent();
       }
     }
   }
@@ -81,10 +84,11 @@ class ChaveY extends GameDecoration with Sensor {
         );
   @override
   void onContact(GameComponent component) {
-    if (component is Personagem) {
+    if (component is Personagem && component.chaveAmarela == false) {
+      component.chaveAmarela = true;
+      removeFromParent();
       if (component.life < 100) {
         (component).addLife(10);
-        removeFromParent();
       }
     }
   }
@@ -101,10 +105,11 @@ class ChaveG extends GameDecoration with Sensor {
         );
   @override
   void onContact(GameComponent component) {
-    if (component is Personagem) {
+    if (component is Personagem && component.chaveVerde == false) {
+      component.chaveVerde = true;
+      removeFromParent();
       if (component.life < 100) {
         (component).addLife(10);
-        removeFromParent();
       }
     }
   }

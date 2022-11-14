@@ -6,6 +6,7 @@ import 'package:game_usf/decorations/lamp.dart';
 import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
 import 'package:game_usf/decorations/portaG.dart';
+import 'package:game_usf/decorations/porta_azul.dart';
 import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
@@ -70,11 +71,12 @@ class Game extends StatelessWidget {
           'lampr': (properties) => LampR(properties.position),
           'fusivel': (properties) => Fusivel(properties.position),
           'alicate': (properties) => Alicate(properties.position),
-          'cartao': (properties) => Cartao(properties.position),
+          'cartaob': (properties) => CartaoAzul(properties.position),
           'chavey': (properties) => ChaveY(properties.position),
           'chaveg': (properties) => ChaveG(properties.position),
           'vida': (properties) => Vida(properties.position),
           'mathias': (properties) => Mathias(properties.position),
+          'portaAzul': (properties) => PortaAzul(properties.position),
         },
       ),
       player: Personagem(
@@ -94,7 +96,7 @@ class Game extends StatelessWidget {
         sizeMovementWindow: const Size(10, 10),
         zoom: 4.0,
       ),
-      showCollisionArea: false,
+      showCollisionArea: true,
 
       //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),

@@ -11,6 +11,10 @@ class Personagem extends SimplePlayer
     with ObjectCollision, Lighting, TapGesture {
   bool fusivel = false;
   int totalLigado = 0;
+  bool cartaoAzul = false;
+  bool alicateVermelho = false;
+  bool chaveAmarela = false;
+  bool chaveVerde = false;
 
   Personagem(Vector2 position)
       : super(
