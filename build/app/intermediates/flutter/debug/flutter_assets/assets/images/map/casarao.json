@@ -617,7 +617,7 @@
                 {
                  "height":24,
                  "id":65,
-                 "name":"portaC",
+                 "name":"portaVermelhaCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -628,7 +628,7 @@
                 {
                  "height":24,
                  "id":66,
-                 "name":"portaB",
+                 "name":"portaVermelhaBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -683,7 +683,7 @@
                 {
                  "height":24,
                  "id":71,
-                 "name":"portaC",
+                 "name":"portaVermelhaCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -694,7 +694,7 @@
                 {
                  "height":24,
                  "id":72,
-                 "name":"portaB",
+                 "name":"portaVermelhaBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -890,6 +890,17 @@
                  "width":16,
                  "x":649,
                  "y":98
+                }, 
+                {
+                 "height":16,
+                 "id":110,
+                 "name":"alicate",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":417.5,
+                 "y":560
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -898,7 +909,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":110,
+ "nextobjectid":113,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.03.23",

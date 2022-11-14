@@ -7,12 +7,12 @@ import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
 import 'package:game_usf/decorations/porta_azul.dart';
 import 'package:game_usf/decorations/porta_vermelha.dart';
+import 'package:game_usf/decorations/porta_vermelha_de_lado.dart';
 import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
 import 'package:flutter/services.dart';
-
-import 'decorations/portag_teste.dart';
+import 'decorations/portag_branca.dart';
 
 double tileSize = 16;
 void main() {
@@ -65,7 +65,7 @@ class Game extends StatelessWidget {
           'zumbi': (properties) => Zumbi(properties.position),
           'lamp': (properties) => Lamp(properties.position),
           'energia': (properties) => Energia(properties.position),
-          'portaG': (properties) => PortaGTeste(properties.position),
+          'portaG': (properties) => PortaBranca(properties.position),
           'portaC': (properties) => PortaC(properties.position),
           'portaB': (properties) => PortaB(properties.position),
           'lampy': (properties) => LampY(properties.position),
@@ -80,6 +80,10 @@ class Game extends StatelessWidget {
           'mathias': (properties) => Mathias(properties.position),
           'portaAzul': (properties) => PortaAzul(properties.position),
           'portaVermelha': (properties) => PortaVermelha(properties.position),
+          'portaVermelhaCima': (properties) =>
+              PortaVermelhaCima(properties.position),
+          'portaVermelhaBaixo': (properties) =>
+              PortaVermelhaBaixo(properties.position),
         },
       ),
       player: Personagem(
@@ -99,7 +103,7 @@ class Game extends StatelessWidget {
         sizeMovementWindow: const Size(10, 10),
         zoom: 4.0,
       ),
-      showCollisionArea: true,
+      showCollisionArea: false,
 
       //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),
