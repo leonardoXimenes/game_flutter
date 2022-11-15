@@ -22,6 +22,16 @@ class DecorationSpriteSheet {
         'portaG.png',
         srcPosition: Vector2(tileSize * 2, 0),
         srcSize: Vector2(tileSize * 2, tileSize * 2),
+      ); //---------------------Porta de Frente----------------------------------
+  static Future<Sprite> get portaE => Sprite.load(
+        'portaG.png',
+        srcPosition: Vector2(0, 0),
+        srcSize: Vector2(tileSize, tileSize * 2),
+      );
+  static Future<Sprite> get portaEAberta => Sprite.load(
+        'portaG.png',
+        srcPosition: Vector2(tileSize * 2, 0),
+        srcSize: Vector2(tileSize, tileSize * 2),
       );
   //---------------------Porta de ladoC----------------------------------
   static Future<Sprite> get portaC => Sprite.load(
@@ -50,5 +60,11 @@ class DecorationSpriteSheet {
         'itens.png',
         srcPosition: Vector2(0, tileSize * 7),
         srcSize: Vector2(tileSize, tileSize),
+      );
+  //---------------------Rosto do personagem-------------------------------
+  static Future<Sprite> get fimDeJogo => Sprite.load(
+        'itens.png',
+        srcPosition: Vector2(0, tileSize * 7),
+        srcSize: Vector2(tileSize * 9, 0),
       );
 }

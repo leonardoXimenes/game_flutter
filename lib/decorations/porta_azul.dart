@@ -49,7 +49,7 @@ class PortaAzul extends GameDecoration with ObjectCollision, Lighting {
 
   @override
   void onCollision(GameComponent component, active) {
-    if (component is Personagem && component.totalLigado >= 1) {
+    if (component is Personagem && component.totalLigado >= 5) {
       sprite = portaGAberta;
       setupCollision(
         CollisionConfig(

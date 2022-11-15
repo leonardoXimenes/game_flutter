@@ -529,7 +529,7 @@
                 {
                  "height":24,
                  "id":57,
-                 "name":"portaC",
+                 "name":"portaAmarelaCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -540,7 +540,7 @@
                 {
                  "height":24,
                  "id":58,
-                 "name":"portaB",
+                 "name":"portaAmarelaBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -595,7 +595,7 @@
                 {
                  "height":24,
                  "id":63,
-                 "name":"portaC",
+                 "name":"portaAmarelaCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -606,7 +606,7 @@
                 {
                  "height":24,
                  "id":64,
-                 "name":"portaB",
+                 "name":"portaAmarelaBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -723,6 +723,28 @@
                  "width":32,
                  "x":72.03125,
                  "y":240.495416666667
+                }, 
+                {
+                 "height":32,
+                 "id":113,
+                 "name":"portaAmarela",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":759.909090909091,
+                 "y":392.560606060606
+                }, 
+                {
+                 "height":32,
+                 "id":117,
+                 "name":"fim",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":391.666666666667,
+                 "y":644.666666666667
                 }],
          "offsetx":-8,
          "offsety":-8.33333333333326,
@@ -871,17 +893,6 @@
                 }, 
                 {
                  "height":16,
-                 "id":108,
-                 "name":"alicate",
-                 "rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":15.3333333333333,
-                 "y":238.666666666667
-                }, 
-                {
-                 "height":16,
                  "id":109,
                  "name":"vida",
                  "rotation":0,
@@ -893,14 +904,14 @@
                 }, 
                 {
                  "height":16,
-                 "id":110,
-                 "name":"alicate",
+                 "id":116,
+                 "name":"vida",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":417.5,
-                 "y":560
+                 "x":391,
+                 "y":299
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -909,7 +920,7 @@
          "y":0
         }],
  "nextlayerid":7,
- "nextobjectid":113,
+ "nextobjectid":118,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"2021.03.23",

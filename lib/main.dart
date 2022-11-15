@@ -1,10 +1,11 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/decorations/energia.dart';
+import 'package:game_usf/decorations/fim_de_jogo.dart';
 import 'package:game_usf/decorations/item.dart';
 import 'package:game_usf/decorations/lamp.dart';
-import 'package:game_usf/decorations/portaB.dart';
-import 'package:game_usf/decorations/portaC.dart';
+import 'package:game_usf/decorations/porta_amarela.dart';
+import 'package:game_usf/decorations/porta_amarela_de_lado.dart';
 import 'package:game_usf/decorations/porta_azul.dart';
 import 'package:game_usf/decorations/porta_branca_de_lado.dart';
 import 'package:game_usf/decorations/porta_verde_de_lado.dart';
@@ -14,7 +15,7 @@ import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/personagem.dart';
 import 'package:game_usf/zumbi.dart';
 import 'package:flutter/services.dart';
-import 'decorations/portag_branca.dart';
+import 'decorations/porta_branca.dart';
 
 double tileSize = 16;
 void main() {
@@ -89,6 +90,12 @@ class Game extends StatelessWidget {
           'portaVerdeCima': (properties) => PortaVerdeCima(properties.position),
           'portaVerdeBaixo': (properties) =>
               PortaVerdeBaixo(properties.position),
+          'portaAmarelaCima': (properties) =>
+              PortaAmarelaCima(properties.position),
+          'portaAmarelaBaixo': (properties) =>
+              PortaAmarelaBaixo(properties.position),
+          'portaAmarela': (properties) => PortaAmarela(properties.position),
+          'fim': (properties) => Fim(properties.position),
         },
       ),
       player: Personagem(
@@ -108,7 +115,7 @@ class Game extends StatelessWidget {
         sizeMovementWindow: const Size(10, 10),
         zoom: 4.0,
       ),
-      showCollisionArea: false,
+      showCollisionArea: true,
 
       //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),
