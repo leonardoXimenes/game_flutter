@@ -6,6 +6,7 @@ import 'package:game_usf/decorations/lamp.dart';
 import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
 import 'package:game_usf/decorations/porta_azul.dart';
+import 'package:game_usf/decorations/porta_branca_de_lado.dart';
 import 'package:game_usf/decorations/porta_verde_de_lado.dart';
 import 'package:game_usf/decorations/porta_vermelha.dart';
 import 'package:game_usf/decorations/porta_vermelha_de_lado.dart';
@@ -67,8 +68,8 @@ class Game extends StatelessWidget {
           'lamp': (properties) => Lamp(properties.position),
           'energia': (properties) => Energia(properties.position),
           'portaG': (properties) => PortaBranca(properties.position),
-          'portaC': (properties) => PortaC(properties.position),
-          'portaB': (properties) => PortaB(properties.position),
+          'portaC': (properties) => PortaBrancaCima(properties.position),
+          'portaB': (properties) => PortaBrancaBaixo(properties.position),
           'lampy': (properties) => LampY(properties.position),
           'lampg': (properties) => LampG(properties.position),
           'lampr': (properties) => LampR(properties.position),
