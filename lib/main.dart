@@ -115,7 +115,7 @@ class Game extends StatelessWidget {
         sizeMovementWindow: const Size(10, 10),
         zoom: 4.0,
       ),
-      showCollisionArea: true,
+      showCollisionArea: false,
 
       //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),

@@ -4,13 +4,11 @@ import 'package:game_usf/player_sprite_sheet.dart';
 
 double tamanho = 20;
 bool mover = true;
-String item = "";
-int quantidade = 0;
 
 class Personagem extends SimplePlayer
     with ObjectCollision, Lighting, TapGesture {
   bool fusivel = false;
-  int totalLigado = 0;
+  int totalLigado = 5;
   bool cartaoAzul = false;
   bool alicateVermelho = false;
   bool chaveAmarela = false;
