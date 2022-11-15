@@ -6,6 +6,7 @@ import 'package:game_usf/decorations/lamp.dart';
 import 'package:game_usf/decorations/portaB.dart';
 import 'package:game_usf/decorations/portaC.dart';
 import 'package:game_usf/decorations/porta_azul.dart';
+import 'package:game_usf/decorations/porta_verde_de_lado.dart';
 import 'package:game_usf/decorations/porta_vermelha.dart';
 import 'package:game_usf/decorations/porta_vermelha_de_lado.dart';
 import 'package:game_usf/interface/player_interface.dart';
@@ -84,6 +85,9 @@ class Game extends StatelessWidget {
               PortaVermelhaCima(properties.position),
           'portaVermelhaBaixo': (properties) =>
               PortaVermelhaBaixo(properties.position),
+          'portaVerdeCima': (properties) => PortaVerdeCima(properties.position),
+          'portaVerdeBaixo': (properties) =>
+              PortaVerdeBaixo(properties.position),
         },
       ),
       player: Personagem(

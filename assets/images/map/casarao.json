@@ -573,7 +573,7 @@
                 {
                  "height":24,
                  "id":61,
-                 "name":"portaC",
+                 "name":"portaVerdeCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -584,7 +584,7 @@
                 {
                  "height":24,
                  "id":62,
-                 "name":"portaB",
+                 "name":"portaVerdeBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -639,7 +639,7 @@
                 {
                  "height":24,
                  "id":67,
-                 "name":"portaC",
+                 "name":"portaVerdeCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -650,7 +650,7 @@
                 {
                  "height":24,
                  "id":68,
-                 "name":"portaB",
+                 "name":"portaVerdeBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -661,7 +661,7 @@
                 {
                  "height":24,
                  "id":69,
-                 "name":"portaC",
+                 "name":"portaVerdeCima",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -672,7 +672,7 @@
                 {
                  "height":24,
                  "id":70,
-                 "name":"portaB",
+                 "name":"portaVerdeBaixo",
                  "rotation":0,
                  "type":"",
                  "visible":true,
