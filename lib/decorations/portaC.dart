@@ -1,8 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/cupertino.dart';
-import 'package:game_usf/decoration_sprite_sheet.dart';
-import 'package:game_usf/personagem.dart';
+import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
+import 'package:game_usf/characters/personagem.dart';
 import 'package:bonfire/bonfire.dart';
 
 import '../main.dart';

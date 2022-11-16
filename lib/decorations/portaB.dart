@@ -2,8 +2,8 @@
 
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:game_usf/decoration_sprite_sheet.dart';
-import 'package:game_usf/personagem.dart';
+import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
+import 'package:game_usf/characters/personagem.dart';
 
 import '../main.dart';
 

@@ -1,6 +1,6 @@
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:game_usf/personagem.dart';
+import 'package:game_usf/characters/personagem.dart';
 
 class Lamp extends GameDecoration with Lighting {
   Lamp(Vector2 position)

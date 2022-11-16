@@ -2,9 +2,9 @@
 
 import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
-import 'package:game_usf/item_sprite_sheet.dart';
-import 'package:game_usf/personagem.dart';
-import 'package:game_usf/player_sprite_sheet.dart';
+import 'package:game_usf/sprite_sheets/item_sprite_sheet.dart';
+import 'package:game_usf/characters/personagem.dart';
+import 'package:game_usf/sprite_sheets/player_sprite_sheet.dart';
 
 import '../main.dart';
 
