@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter/services.dart';
 import 'game.dart';
+import 'my_game_audio.dart';
 
 double tileSize = 16;
 void main() {
@@ -10,6 +11,7 @@ void main() {
     DeviceOrientation.landscapeLeft,
     DeviceOrientation.landscapeRight,
   ]);
+  Sounds.initialize();
 }
 
 class MyApp extends StatelessWidget {

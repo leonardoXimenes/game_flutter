@@ -4,6 +4,7 @@ import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
 import 'package:game_usf/characters/personagem.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 class PortaAzul extends GameDecoration with ObjectCollision, Lighting {
   bool comChave = false;
@@ -51,6 +52,7 @@ class PortaAzul extends GameDecoration with ObjectCollision, Lighting {
   void onCollision(GameComponent component, active) {
     if (component is Personagem && component.totalLigado >= 5) {
       sprite = portaGAberta;
+      Sounds.unlockedDoor();
       setupCollision(
         CollisionConfig(
           collisions: [

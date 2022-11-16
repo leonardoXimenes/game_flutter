@@ -6,6 +6,7 @@ import 'package:game_usf/sprite_sheets/player_sprite_sheet.dart';
 import 'package:game_usf/sprite_sheets/zumbi_sprite_sheet.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 bool mover = true;
 
@@ -92,6 +93,7 @@ class Zumbi extends SimpleEnemy with ObjectCollision, AutomaticRandomMovement {
   @override
   void receiveDamage(double damage, from) {
     mover = false;
+    Sounds.damage();
     if (lastDirectionHorizontal == Direction.left) {
       animation?.playOnce(
         ZumbiSpriteSheet.damageLeft,

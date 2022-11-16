@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:game_usf/sprite_sheets/player_sprite_sheet.dart';
 
 import '../game.dart';
+import '../my_game_audio.dart';
 
 double tamanho = 20;
 bool mover = true;
@@ -58,6 +59,7 @@ class Personagem extends SimplePlayer
     if (gameRef.player?.isDead == false) {
       if (event.event == ActionEvent.DOWN && event.id == 1) {
         _executeAttack();
+        Sounds.attack();
       }
       super.joystickAction(event);
     }
@@ -108,6 +110,7 @@ class Personagem extends SimplePlayer
 
   @override
   void receiveDamage(double damage, from) {
+    Sounds.damage();
     if (lastDirectionHorizontal == Direction.left) {
       animation?.playOnce(
         PlayerSpriteSheet.damageLeft,

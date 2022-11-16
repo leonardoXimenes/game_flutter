@@ -6,6 +6,7 @@ import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
 import 'package:game_usf/characters/personagem.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 class PortaB extends GameDecoration with ObjectCollision {
   bool _playerIsClose = false;
@@ -50,6 +51,7 @@ class PortaB extends GameDecoration with ObjectCollision {
   void render(Canvas canvas) {
     if (_playerIsClose) {
       sprite = portaBAberta;
+      Sounds.unlockedDoor();
       setupCollision(
         CollisionConfig(
           collisions: [

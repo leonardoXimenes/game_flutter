@@ -4,6 +4,7 @@ import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
 
 import '../main.dart';
 import '../characters/personagem.dart';
+import '../my_game_audio.dart';
 
 class Energia extends GameDecoration with Sensor, Lighting {
   bool ligado = false;
@@ -20,6 +21,7 @@ class Energia extends GameDecoration with Sensor, Lighting {
     if (component is Personagem &&
         component.fusivel == true &&
         ligado == false) {
+      Sounds.useFuse();
       sprite = energiaLigada;
       ligado = true;
       component.totalLigado += 1;

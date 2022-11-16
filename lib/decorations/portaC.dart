@@ -6,6 +6,7 @@ import 'package:game_usf/characters/personagem.dart';
 import 'package:bonfire/bonfire.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 class PortaC extends GameDecoration with ObjectCollision {
   bool _playerIsClose = false;
@@ -50,6 +51,7 @@ class PortaC extends GameDecoration with ObjectCollision {
   void render(Canvas canvas) {
     if (_playerIsClose) {
       sprite = portaCAberta;
+      Sounds.unlockedDoor();
       setupCollision(
         CollisionConfig(
           collisions: [
