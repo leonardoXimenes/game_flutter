@@ -44,6 +44,7 @@ class Fim extends GameDecoration with Sensor {
           );
         },
       );
+      gameRef.pauseEngine();
     }
   }
 }

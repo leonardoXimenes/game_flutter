@@ -1,4 +1,4 @@
-#Tue Nov 15 21:23:15 BRT 2022
+#Wed Nov 16 00:01:58 BRT 2022
 base.0=C\:\\projetos\\game_usf\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

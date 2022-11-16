@@ -127,6 +127,7 @@ class Vida extends GameDecoration with Sensor {
 
   @override
   void onContact(GameComponent component) {
+    //gameRef.som.;
     if (component is Personagem) {
       if (component.life < 100) {
         (component).addLife(50);
@@ -200,21 +201,6 @@ class Mathias extends GameDecoration with TapGesture, Lighting {
         personSayDirection: PersonSayDirection.RIGHT,
       ),
     ]);
-
-    /*if (FollowerWidget.isVisible('identify')) {
-      FollowerWidget.remove('identify');
-    } else {
-      FollowerWidget.show(
-        identify: 'identify',
-        context: context,
-        target: this,
-        child: Card(
-          child: Column(
-            children: [Text(''), Icon(Icons.add_card)],
-          ),
-        ),
-      );
-    }*/
   }
 
   @override
