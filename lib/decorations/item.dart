@@ -142,10 +142,10 @@ class Vida extends GameDecoration with Sensor {
 }
 
 //----------------------------------------------------
-class Mathias extends GameDecoration with TapGesture, Lighting {
-  Mathias(Vector2 position)
+class Matias extends GameDecoration with TapGesture, Lighting {
+  Matias(Vector2 position)
       : super.withAnimation(
-          ItemSpriteSheet.mathiasAnim,
+          ItemSpriteSheet.matiasAnim,
           position: position,
           width: tileSize,
           height: tileSize,
@@ -170,13 +170,13 @@ class Mathias extends GameDecoration with TapGesture, Lighting {
         text: [
           const TextSpan(
               // ignore: prefer_adjacent_string_concatenation
-              text: 'Mathias:  Julius, a mansão esta cheia de zumbi,' +
+              text: 'Matias:  Julius, a mansão esta cheia de zumbi,' +
                   ' você precisa encontar os fuziveis e ligar a força pra gente conseguir sair daqui!'),
         ],
         person: SizedBox(
           height: 100,
           width: 100,
-          child: ItemSpriteSheet.mathiasAnim.asWidget(),
+          child: ItemSpriteSheet.matiasAnim.asWidget(),
         ),
       ),
       Say(
@@ -190,7 +190,7 @@ class Mathias extends GameDecoration with TapGesture, Lighting {
         person: SizedBox(
           height: 100,
           width: 100,
-          child: ItemSpriteSheet.mathiasAnim.asWidget(),
+          child: ItemSpriteSheet.matiasAnim.asWidget(),
         ),
       ),
       Say(

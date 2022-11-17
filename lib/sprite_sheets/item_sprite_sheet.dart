@@ -66,8 +66,8 @@ class ItemSpriteSheet {
       );
 
 //----------------------------------------------------------
-  static Future<SpriteAnimation> get mathiasAnim => SpriteAnimation.load(
-        'mathias.png',
+  static Future<SpriteAnimation> get matiasAnim => SpriteAnimation.load(
+        'matias.png',
         SpriteAnimationData.sequenced(
           amount: 6,
           stepTime: tempo,

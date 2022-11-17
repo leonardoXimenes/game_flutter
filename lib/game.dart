@@ -62,7 +62,7 @@ class _GameState extends State<Game> {
           'chavey': (properties) => ChaveY(properties.position),
           'chaveg': (properties) => ChaveG(properties.position),
           'vida': (properties) => Vida(properties.position),
-          'mathias': (properties) => Mathias(properties.position),
+          'matias': (properties) => Matias(properties.position),
           'portaAzul': (properties) => PortaAzul(properties.position),
           'portaVermelha': (properties) => PortaVermelha(properties.position),
           'portaVermelhaCima': (properties) =>
