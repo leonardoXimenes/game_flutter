@@ -4,6 +4,7 @@ import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
 import 'package:game_usf/characters/personagem.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 class PortaAmarela extends GameDecoration with ObjectCollision, Lighting {
   bool comChave = false;
@@ -51,6 +52,7 @@ class PortaAmarela extends GameDecoration with ObjectCollision, Lighting {
   void onCollision(GameComponent component, active) {
     if (component is Personagem && component.chaveAmarela == true) {
       sprite = portaEAberta;
+      Sounds.unlockedDoor();
       setupCollision(
         CollisionConfig(
           collisions: [

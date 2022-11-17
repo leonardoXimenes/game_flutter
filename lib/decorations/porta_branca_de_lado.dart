@@ -4,6 +4,7 @@ import 'package:game_usf/sprite_sheets/decoration_sprite_sheet.dart';
 import 'package:game_usf/characters/personagem.dart';
 
 import '../main.dart';
+import '../my_game_audio.dart';
 
 class PortaBrancaCima extends GameDecoration with ObjectCollision, Lighting {
   Sprite? portaC, portaCAberta;
@@ -48,6 +49,7 @@ class PortaBrancaCima extends GameDecoration with ObjectCollision, Lighting {
   @override
   void onCollision(GameComponent component, active) {
     if (component is Personagem) {
+      Sounds.unlockedDoor();
       sprite = portaCAberta;
       setupCollision(
         CollisionConfig(
@@ -118,6 +120,7 @@ class PortaBrancaBaixo extends GameDecoration with ObjectCollision, Lighting {
   @override
   void onCollision(GameComponent component, active) {
     if (component is Personagem) {
+      Sounds.unlockedDoor();
       sprite = portaBAberta;
       setupCollision(
         CollisionConfig(

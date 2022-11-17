@@ -7,8 +7,7 @@ import 'package:game_usf/characters/personagem.dart';
 import 'package:game_usf/sprite_sheets/player_sprite_sheet.dart';
 
 import '../main.dart';
-
-//var p = Personagem(Vector2.all(tileSize));
+import '../my_game_audio.dart';
 
 class Fusivel extends GameDecoration with Sensor {
   Fusivel(Vector2 position)
@@ -23,6 +22,7 @@ class Fusivel extends GameDecoration with Sensor {
     if (component is Personagem && component.fusivel == false) {
       component.fusivel = true;
       removeFromParent();
+      Sounds.getItem();
       if (component.life < 100) {
         (component).addLife(10);
       }
@@ -44,6 +44,7 @@ class Alicate extends GameDecoration with Sensor {
     if (component is Personagem && component.alicateVermelho == false) {
       component.alicateVermelho = true;
       removeFromParent();
+      Sounds.getItem();
       if (component.life < 100) {
         (component).addLife(10);
       }
@@ -66,6 +67,7 @@ class CartaoAzul extends GameDecoration with Sensor {
       component.cartaoAzul = true;
       component.totalLigado += 1;
       removeFromParent();
+      Sounds.getItem();
       if (component.life < 100) {
         (component).addLife(10);
       }
@@ -87,6 +89,7 @@ class ChaveY extends GameDecoration with Sensor {
     if (component is Personagem && component.chaveAmarela == false) {
       component.chaveAmarela = true;
       removeFromParent();
+      Sounds.getItem();
       if (component.life < 100) {
         (component).addLife(10);
       }
@@ -108,6 +111,7 @@ class ChaveG extends GameDecoration with Sensor {
     if (component is Personagem && component.chaveVerde == false) {
       component.chaveVerde = true;
       removeFromParent();
+      Sounds.getItem();
       if (component.life < 100) {
         (component).addLife(10);
       }
@@ -127,11 +131,11 @@ class Vida extends GameDecoration with Sensor {
 
   @override
   void onContact(GameComponent component) {
-    //gameRef.som.;
     if (component is Personagem) {
       if (component.life < 100) {
         (component).addLife(50);
         removeFromParent();
+        Sounds.getItem();
       }
     }
   }

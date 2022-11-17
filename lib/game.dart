@@ -14,6 +14,7 @@ import 'package:game_usf/decorations/porta_vermelha_de_lado.dart';
 import 'package:game_usf/interface/player_interface.dart';
 import 'package:game_usf/characters/personagem.dart';
 import 'package:game_usf/characters/zumbi.dart';
+import 'package:game_usf/my_game_audio.dart';
 import 'decorations/porta_branca.dart';
 import 'main.dart';
 import 'my_game_controller.dart';
@@ -103,6 +104,9 @@ class _GameState extends State<Game> {
 
       //---iluminação do ambiente----------------------------
       lightingColorGame: Colors.black.withOpacity(0.98),
+      onReady: (game) {
+        Sounds.playBackgroundSound();
+      },
     );
   }
 }
