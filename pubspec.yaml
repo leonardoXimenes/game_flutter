@@ -34,7 +34,27 @@ dependencies:
 
   bonfire: ^1.12.1
   flame_audio: ^1.0.0-rc.15
+
+  flutter_native_splash: ^1.2.0
+  flutter_launcher_icons: ^0.9.1
+
+  cupertino_icons: ^1.0.2
+
+flutter_native_splash:
+  color: "#000000"
+  image: "assets/app/splash.png"
+  android: true
+  ios: true
+
+flutter_icons:
+  image_path: "assets/app/icon.png"
+  ios: true
+  remove_alpha_ios: true
+  android: "launcher_icon"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/app/icon-android.png"
   
+
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +83,7 @@ flutter:
     - assets/images/
     - assets/images/map/
     - assets/audio/
+    - assets/app/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
