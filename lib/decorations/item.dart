@@ -141,7 +141,7 @@ class Vida extends GameDecoration with Sensor {
   }
 }
 
-//-----------------------------------------------------
+//----------------------------------------------------
 class Matias extends GameDecoration with TapGesture, Lighting {
   Matias(Vector2 position)
       : super.withAnimation(
