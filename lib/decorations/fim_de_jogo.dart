@@ -29,7 +29,7 @@ class Fim extends GameDecoration with Sensor {
             title: const Text("Fim de Jogo", textAlign: TextAlign.center),
             actions: <Widget>[
               Center(
-                child: FlatButton(
+                child: ElevatedButton(
                   child: const Text("Reiniciar",
                       textAlign: TextAlign.center, textScaleFactor: 1.5),
                   onPressed: () {

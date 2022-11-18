@@ -18,16 +18,17 @@ class MyGameController extends GameComponent {
           context: context,
           builder: (context) {
             return AlertDialog(
-              content: const Text('Game over',
-                  textAlign: TextAlign.center, textScaleFactor: 1.5),
-              actions: [
-                TextButton(
-                  onPressed: () {
-                    _goStage(stage);
-                  },
-                  child: const Text('iniciar jogo',
-                      textAlign: TextAlign.center, textScaleFactor: 1.5),
-                )
+              title: const Text("Game over", textAlign: TextAlign.center),
+              actions: <Widget>[
+                Center(
+                  child: ElevatedButton(
+                    child: const Text("iniciar jogo",
+                        textAlign: TextAlign.center, textScaleFactor: 1.5),
+                    onPressed: () {
+                      _goStage(stage);
+                    },
+                  ),
+                ),
               ],
             );
           },

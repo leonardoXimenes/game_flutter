@@ -13,7 +13,7 @@ bool mover = true;
 class Personagem extends SimplePlayer
     with ObjectCollision, Lighting, TapGesture {
   bool fusivel = false;
-  int totalLigado = 0;
+  int totalLigado = 5;
   bool cartaoAzul = false;
   bool alicateVermelho = false;
   bool chaveAmarela = false;
@@ -141,7 +141,7 @@ class Personagem extends SimplePlayer
           title: const Text("Reiniciar jogo", textAlign: TextAlign.center),
           actions: <Widget>[
             Center(
-              child: FlatButton(
+              child: ElevatedButton(
                 child: const Text("Sim",
                     textAlign: TextAlign.center, textScaleFactor: 1.5),
                 onPressed: () {
