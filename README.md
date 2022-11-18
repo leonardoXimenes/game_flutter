@@ -1,16 +1,31 @@
-# game_usf
+# RE2D
 
-A new Flutter project.
+RE2D é um jogo de sobrevivência, o jogador deve usar as chaves e alicate 
+para abrir as portas de cor correspondente, encontrar e usar os 4 fusíveis 
+no quadro elétrico para ligar a energia, e encontrar e usar o cartão na porta de saída.
 
-## Getting Started
+## Tecnologias
 
-This project is a starting point for a Flutter application.
+- Dart
+- Flutter 3.0.5
 
-A few resources to get you started if this is your first Flutter project:
+<h3> Packages</h3>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+-  [bonfire: ^1.12.1](https://pub.dev/packages/bonfire/versions)
+-  [flame_audio: ^1.0.0-rc.15](https://pub.dev/packages/flame_audio/versions)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Instalação
+- Clone o repositório
+- execute o app (f5)
+
+## Autores
+
+-  [Leonardo Ximenes](https://github.com/leonardoXimenes)
+-  [Luiz Gustavo](https://github.com/Luiz-GustavoGC)
+-  [Gabriel de Oliveira](https://github.com/Gabriel-432)
+-  [Matheus_Bizo](https://github.com/Mbizoo)
+-  [Matias Filho](https://github.com/matiasfilho81)
+
+## License
+MIT
