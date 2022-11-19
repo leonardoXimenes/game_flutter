@@ -1,10 +1,13 @@
-import 'package:bonfire/base/game_component.dart';
+import 'package:bonfire/bonfire.dart';
 import 'package:flutter/material.dart';
 import 'package:game_usf/game.dart';
+import 'package:game_usf/sprite_sheets/item_sprite_sheet.dart';
+import 'package:game_usf/sprite_sheets/player_sprite_sheet.dart';
 
 class MyGameController extends GameComponent {
   bool gameOver = false;
   final int stage;
+  bool falar = true;
 
   MyGameController(this.stage);
 
@@ -33,6 +36,50 @@ class MyGameController extends GameComponent {
             );
           },
         );
+      }
+      if (falar) {
+        TalkDialog.show(context, [
+          Say(
+            text: [
+              const TextSpan(
+                  text: 'Matias:  Julius, a mansão esta cheia de zumbi,'
+                      ' você precisa encontar os fuziveis e ligar a força '
+                      'pra gente conseguir sair daqui!'),
+            ],
+            person: SizedBox(
+              height: 100,
+              width: 100,
+              child: ItemSpriteSheet.matiasAnim.asWidget(),
+            ),
+            personSayDirection: PersonSayDirection.RIGHT,
+          ),
+          Say(
+            text: [
+              const TextSpan(
+                  text:
+                      'Um segurança deixou o cartão da porta de entrada cair ao '
+                      'norte do casarão, você vai precisar encontrar a '
+                      'chave daquela area para chegar la!'),
+            ],
+            person: SizedBox(
+              height: 100,
+              width: 100,
+              child: ItemSpriteSheet.matiasAnim.asWidget(),
+            ),
+            personSayDirection: PersonSayDirection.RIGHT,
+          ),
+          Say(
+            text: [
+              const TextSpan(text: 'Julius: Deixa comigo !!!'),
+            ],
+            person: SizedBox(
+              height: 100,
+              width: 100,
+              child: PlayerSpriteSheet.idleright.asWidget(),
+            ),
+          ),
+        ]);
+        falar = false;
       }
     }
 

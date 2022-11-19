@@ -169,59 +169,58 @@ class Matias extends GameDecoration with TapGesture, Lighting {
       Say(
         text: [
           const TextSpan(
-              // ignore: prefer_adjacent_string_concatenation
-              text: 'Matias:  Julius, a mansão esta cheia de zumbi,' +
-                  ' você precisa encontar os fuziveis e ligar a força pra gente conseguir sair daqui!'),
+              text: 'Matias: Julius, são 4 fusíveis e o cartão dessa '
+                  'porta que está caído em algum lugar ao norte do casarão, '
+                  'encontre os 4 fusíveis e coloca na caixa de força que está '
+                  'ao leste do casarão e depois volte aqui.'),
         ],
         person: SizedBox(
           height: 100,
           width: 100,
           child: ItemSpriteSheet.matiasAnim.asWidget(),
         ),
+        personSayDirection: PersonSayDirection.RIGHT,
       ),
       Say(
         text: [
           const TextSpan(
-              text:
-                  // ignore: prefer_adjacent_string_concatenation
-                  'Um segurança deixou o cartão da porta de entrada cair ao norte do casarão,' +
-                      ' você vai precisar encontrar a chave daquela area para chegar la!'),
+              text: 'Se você fizer isso nós vamos conseguir abrir essa '
+                  'porta com o cartão, mas antes você vai precisar '
+                  'encontrar as chaves para conseguir acessar todas as '
+                  'áreas do casarão.'),
         ],
         person: SizedBox(
           height: 100,
           width: 100,
           child: ItemSpriteSheet.matiasAnim.asWidget(),
         ),
+        personSayDirection: PersonSayDirection.RIGHT,
       ),
       Say(
         text: [
-          const TextSpan(text: 'Julius: Putz !!!'),
+          const TextSpan(text: 'Julius: Ah, é verdade, tinha esquecido.'),
         ],
         person: SizedBox(
           height: 100,
           width: 100,
-          child: PlayerSpriteSheet.idleleft.asWidget(),
+          child: PlayerSpriteSheet.idleright.asWidget(),
         ),
-        personSayDirection: PersonSayDirection.RIGHT,
       ),
     ]);
   }
 
   @override
   void onTapCancel() {
-    // ignore: todo
-    // TODO: implement onTapCancel
+    //
   }
 
   @override
   void onTapDown(int pointer, Offset position) {
-    // ignore: todo
-    // TODO: implement onTapDown
+    //
   }
 
   @override
   void onTapUp(int pointer, Offset position) {
-    // ignore: todo
-    // TODO: implement onTapUp
+    //
   }
 }

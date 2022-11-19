@@ -81,7 +81,7 @@ class _GameState extends State<Game> {
         },
       ),
       player: Personagem(
-        Vector2(tileSize * 28, tileSize * 36),
+        Vector2(tileSize * 24, tileSize * 37),
       ),
       overlayBuilderMap: {
         PlayerInterface.overlayKey: (context, game) => PlayerInterface(
