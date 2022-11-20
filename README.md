@@ -5,7 +5,7 @@
 RE2D é um jogo de sobrevivência, o jogador deve usar as chaves e alicate 
 para abrir as portas de cor correspondente, encontrar e usar os 4 fusíveis 
 no quadro elétrico para ligar a energia, e encontrar e usar o cartão na porta de saída.
-O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTEMAS MÓVEIS do curso de ADS da USF.
+O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTEMAS MÓVEIS do curso de ADS da [USF](https://www.usf.edu.br/vestibular/).
 
 ## Tecnologias
 
