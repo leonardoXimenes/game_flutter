@@ -37,6 +37,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Padding(
       padding: const EdgeInsets.all(25.0),
       child: Row(
@@ -44,8 +46,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
           Stack(
             children: [
               Container(
-                width: 50,
-                height: 50,
+                width: size.width * .08,
+                height: size.height * .14,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(50, 255, 255, 255),
                   borderRadius: BorderRadius.circular(10),
@@ -53,8 +55,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
                 ),
               ),
               SizedBox(
-                height: 50,
-                width: 50,
+                height: size.height * .14,
+                width: size.width * .08,
                 child: DecorationSpriteSheet.rosto.asWidget(),
               ),
             ],
@@ -66,7 +68,7 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
             children: [
               Container(
                 width: widthCurrent,
-                height: 50,
+                height: size.height * .14,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(99, 0, 177, 6),
                   borderRadius: BorderRadius.circular(10),
@@ -74,7 +76,7 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
               ),
               Container(
                 width: widthMax,
-                height: 50,
+                height: size.height * .14,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(47, 141, 0, 0),
                   borderRadius: BorderRadius.circular(10),

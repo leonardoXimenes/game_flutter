@@ -43,7 +43,7 @@ class MyGameController extends GameComponent {
             text: [
               const TextSpan(
                   text: 'Matias:  Julius, a mansão esta cheia de zumbi,'
-                      ' você precisa encontar os fuziveis e ligar a força '
+                      ' você precisa encontrar os fuziveis e ligar a força '
                       'pra gente conseguir sair daqui!'),
             ],
             person: SizedBox(

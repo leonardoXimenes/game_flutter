@@ -34,14 +34,14 @@ class _GameState extends State<Game> {
       joystick: Joystick(
           directional: JoystickDirectional(
             color: Colors.grey,
-            size: 100,
+            size: MediaQuery.of(context).size.height * .30,
           ),
           actions: [
             JoystickAction(
               actionId: 1,
               color: Colors.grey,
               margin: const EdgeInsets.all(40),
-              size: 80,
+              size: MediaQuery.of(context).size.height * .22,
             )
           ]),
       map: TiledWorldMap(
