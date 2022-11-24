@@ -7,6 +7,8 @@ para abrir as portas de cor correspondente, encontrar e usar os 4 fusíveis
 no quadro elétrico para ligar a energia, e encontrar e usar o cartão na porta de saída.
 O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTEMAS MÓVEIS do curso de ADS da [USF](https://www.usf.edu.br/vestibular/).
 
+[Link para baixar o Jogo](https://drive.google.com/file/d/1mg-kPNut1-9GrBOjO_I1wkNGUcHiBb0_/view).
+
 ## Tecnologias
 
 - Dart
