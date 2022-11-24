@@ -22,7 +22,7 @@ O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTE
 
 ## Instalação
 - Clone o repositório
-- execute o app (f5)
+- execute o app
 
 ## Autores
 
