@@ -30,18 +30,19 @@ class Game extends StatefulWidget {
 class _GameState extends State<Game> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return BonfireTiledWidget(
       joystick: Joystick(
           directional: JoystickDirectional(
             color: Colors.grey,
-            size: MediaQuery.of(context).size.height * .30,
+            size: size.height * .30,
           ),
           actions: [
             JoystickAction(
               actionId: 1,
               color: Colors.grey,
               margin: const EdgeInsets.all(40),
-              size: MediaQuery.of(context).size.height * .22,
+              size: size.height * .22,
             )
           ]),
       map: TiledWorldMap(

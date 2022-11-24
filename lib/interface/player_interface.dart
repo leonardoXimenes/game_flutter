@@ -46,8 +46,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
           Stack(
             children: [
               Container(
-                width: size.width * .08,
-                height: size.height * .14,
+                width: size.width * .075,
+                height: size.width * .075,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(50, 255, 255, 255),
                   borderRadius: BorderRadius.circular(10),
@@ -55,8 +55,8 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
                 ),
               ),
               SizedBox(
-                height: size.height * .14,
-                width: size.width * .08,
+                height: size.width * .075,
+                width: size.width * .075,
                 child: DecorationSpriteSheet.rosto.asWidget(),
               ),
             ],
@@ -67,16 +67,16 @@ class _PlayerInterfaceState extends State<PlayerInterface> {
           Stack(
             children: [
               Container(
-                width: widthCurrent,
-                height: size.height * .14,
+                width: widthCurrent * size.width * .0015,
+                height: size.width * .075,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(99, 0, 177, 6),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
               Container(
-                width: widthMax,
-                height: size.height * .14,
+                width: widthMax * size.width * .0015,
+                height: size.width * .075,
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(47, 141, 0, 0),
                   borderRadius: BorderRadius.circular(10),
