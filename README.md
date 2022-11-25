@@ -7,7 +7,15 @@ para abrir as portas de cor correspondente, encontrar e usar os 4 fusíveis
 no quadro elétrico para ligar a energia, e encontrar e usar o cartão na porta de saída.
 O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTEMAS MÓVEIS do curso de ADS da [USF](https://www.usf.edu.br/vestibular/).
 
-[Link para baixar o Jogo](https://drive.google.com/file/d/1mg-kPNut1-9GrBOjO_I1wkNGUcHiBb0_/view).
+
+<h3>Trabalhos futuros </h3>
+
+Pretendemos adicionar itens decorativos no cenário, como por exemplo cadeiras e mesas, adicionar inimigos diferentes e uma forma do jogador saber quais itens ele pegou e se ele está carregando algum fusível, e quando o personagem encostar nas portas trancadas aparecer qual item ele precisa para destrancá-la.
+
+- [Link para o video do Jogo](https://www.youtube.com/watch?v=h8UnRiwql5I).
+
+- [Link para baixar o Jogo](https://drive.google.com/file/d/1mg-kPNut1-9GrBOjO_I1wkNGUcHiBb0_/view) (android 10).
+
 
 ## Tecnologias
 
@@ -22,7 +30,8 @@ O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTE
 
 ## Instalação
 - Clone o repositório
-- execute o app
+- execute o app 
+
 
 ## Autores
 
@@ -31,6 +40,7 @@ O jogo foi desenvolvido como projeto da disciplina de DESENVOLVIMENTO PARA SISTE
 -  [Gabriel de Oliveira](https://github.com/Gabriel-432)
 -  [Matheus_Bizo](https://github.com/Mbizoo)
 -  [Matias Filho](https://github.com/matiasfilho81)
+
 
 ## License
 MIT
